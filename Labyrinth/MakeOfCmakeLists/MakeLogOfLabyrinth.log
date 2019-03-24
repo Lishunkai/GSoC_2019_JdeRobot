@@ -1,0 +1,92 @@
+Script started on 2018年03月24日 星期一 21时32分46秒
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# cmake ..d build[3@mkdir[C[C[C[C[C[Ccd GSoC_2018_Labyrinth/
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone https://github.com/Lishunkai/GSoC_2018_Labyrinth
+Cloning into 'GSoC_2018_Labyrinth'...
+remote: Counting objects: 14, done.[K
+remote: Compressing objects:  10% (1/10)   [K
+remote: Compressing objects:  20% (2/10)   [K
+remote: Compressing objects:  30% (3/10)   [K
+remote: Compressing objects:  40% (4/10)   [K
+remote: Compressing objects:  50% (5/10)   [K
+remote: Compressing objects:  60% (6/10)   [K
+remote: Compressing objects:  70% (7/10)   [K
+remote: Compressing objects:  80% (8/10)   [K
+remote: Compressing objects:  90% (9/10)   [K
+remote: Compressing objects: 100% (10/10)   [K
+remote: Compressing objects: 100% (10/10), done.[K
+remote: Total 14 (delta 0), reused 14 (delta 0), pack-reused 0[K
+Unpacking objects:   7% (1/14)   
+Unpacking objects:  14% (2/14)   
+Unpacking objects:  21% (3/14)   
+Unpacking objects:  28% (4/14)   
+Unpacking objects:  35% (5/14)   
+Unpacking objects:  42% (6/14)   
+Unpacking objects:  50% (7/14)   
+Unpacking objects:  57% (8/14)   
+Unpacking objects:  64% (9/14)   
+Unpacking objects:  71% (10/14)   
+Unpacking objects:  78% (11/14)   
+Unpacking objects:  85% (12/14)   
+Unpacking objects:  92% (13/14)   
+Unpacking objects: 100% (14/14)   
+Unpacking objects: 100% (14/14), done.
+Checking connectivity... done.
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# git clone https://github.com/Lishunkai/GSoC_2018_Labyrinth
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccmake ..[Kd build
+bash: cd: build: No such file or directory
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# cd buildgit clone https://github.com/Lishunkai/GSoC_2018_Labyrinth
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccmake ..[Kd buildmake ..git clone https://github.com/Lishunkai/GSoC_2018_Labyrinth
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd build[K[Kcd buildgit clone https://github.com/Lishunkai/GSoC_2018_Labyrinth
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccmake ..[Kd build[3@mkdir[C[C[C[C[C[Ccd GSoC_2018_Labyrinth/
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth[00m# cd GSoC_2018_Labyrinth/build[K
+bash: cd: build: No such file or directory
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth[00m# cd buildGSoC_2018_Labyrinth/build[Kgit clone https://github.com/Lishunkai/GS
+SoC_2018_Labyrinth[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth[00m# cmake ..[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd build[3@mkdir[C[C[C[C[C[C
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth[00m# mkdir build[3Pcd[C[C[C[C[C[C
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# cd build[3@mkdir[C[C[C[C[C[C[3Pcd[C[C[C[C[C[CGSoC_2018_Labyrinth/build[Kgit clone https://github.com/Lishun
+nkai/GSoC_2018_Labyrinth[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# cmake ..[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lee/test/GSoC_2018_Labyrinth/build
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# make
+[35m[1mScanning dependencies of target Labyrinth_GSoC2018[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/Labyrinth_GSoC2018.dir/main.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/Labyrinth_GSoC2018.dir/Labyrinth.cpp.o[0m
+[100%] [32m[1mLinking CXX executable Labyrinth_GSoC2018[0m
+[100%] Built target Labyrinth_GSoC2018
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# ./G[Kl[KLabyrinth_GSoC2018 file:///home/ 
+lee/test/GSoC_2018_Labyrinth/example.txt 
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chome/le[C[1P[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chome/lee[1P[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home/lee/[1P[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home/lee/t[1P[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home/lee/te[1P[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home/lee/tes[1P[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home/lee/test[1P[A
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+]0;root@lee-Mi: ~/test/GSoC_2018_Labyrinth/build[01;32mroot@lee-Mi[00m:[01;34m~/test/GSoC_2018_Labyrinth/build[00m# exit
+exit
+
+Script done on 2018年03月26日 星期一 20时01分33秒

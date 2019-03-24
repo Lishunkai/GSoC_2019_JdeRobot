@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kaiser/project/GSoC2019/GSoC_2019_JdeRobot/Labyrinth/Labyrinth.cpp
+iostream
+-
+fstream
+-
+Labyrinth.h
+/home/kaiser/project/GSoC2019/GSoC_2019_JdeRobot/Labyrinth/Labyrinth.h
+
+/home/kaiser/project/GSoC2019/GSoC_2019_JdeRobot/Labyrinth/Labyrinth.h
+vector
+-
+fstream
+-
+
+/home/kaiser/project/GSoC2019/GSoC_2019_JdeRobot/Labyrinth/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+Labyrinth.h
+/home/kaiser/project/GSoC2019/GSoC_2019_JdeRobot/Labyrinth/Labyrinth.h
+

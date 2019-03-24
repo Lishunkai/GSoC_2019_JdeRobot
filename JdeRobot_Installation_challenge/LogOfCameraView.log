@@ -1,0 +1,943 @@
+Script started on 2019年03月24日 星期日 16时43分57秒
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(l 
+sb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.ne 
+t:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+Executing: /tmp/tmp.vawU1aAgFP/gpg.1.sh --keyserver
+hkp://ha.pool.sks-keyservers.net:80
+--recv-key
+421C365BD9FF1F717815A3895523BAEEB01FA116
+gpg: requesting key B01FA116 from hkp server ha.pool.sks-keyservers.net
+gpg: key B01FA116: "ROS Builder <rosbuild@ros.org>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo apt-add-repository "deb http://zeroc.com/download/apt/u 
+buntu$(lsb_release -rs) stable main"
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6 
+DA83306132997
+Executing: /tmp/tmp.1zz7LVpGpG/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv
+5E6DA83306132997
+gpg: requesting key 06132997 from hkp server keyserver.ubuntu.com
+gpg: key 06132997: "ZeroC, Inc. (release key) <support@zeroc.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo sh -c 'echo "deb [arch=amd64] http://jderobot.org/apt $ 
+(lsb_release -sc) main" > /etc/apt/sources.list.d/jderobot.list'
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 24E 
+521A4
+Executing: /tmp/tmp.Gnh9LwIBO2/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv
+24E521A4
+gpg: requesting key 24E521A4 from hkp server keyserver.ubuntu.com
+gpg: key 24E521A4: "Francisco Perez <f.perez475@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo apt update
+[33m
+0% [Working][0m
+            
+Get:1 file:/var/cuda-repo-8-0-local-ga2  InRelease
+
+            
+Ign:1 file:/var/cuda-repo-8-0-local-ga2  InRelease
+[33m
+0% [Working][0m
+            
+Get:2 file:/var/cuda-repo-8-0-local-ga2  Release [574 B]
+[33m
+0% [Working][0m
+            
+Get:2 file:/var/cuda-repo-8-0-local-ga2  Release [574 B]
+[33m
+0% [2 Release 0 B/574 B 0%] [Connecting to security.ubuntu.com][0m[33m
+                                                               
+0% [Connecting to security.ubuntu.com][0m[33m
+0% [Release.gpg gpgv 574 B] [Connecting to cn.archive.ubuntu.com (91.189.91.26)[0m[33m
+0% [Connecting to cn.archive.ubuntu.com (91.189.91.26)] [Connecting to security[0m
+                                                                               
+Ign:4 http://dl.google.com/linux/chrome/deb stable InRelease
+[33m
+0% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.88.161)] [C[0m
+                                                                               
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+[33m
+0% [Waiting for headers] [Waiting for headers] [Connecting to zeroc.com] [Conne[0m[33m
+0% [Release.gpg gpgv 1,189 B] [Waiting for headers] [Waiting for headers] [Conn[0m[33m
+0% [Waiting for headers] [Waiting for headers] [Connecting to zeroc.com] [Conne[0m
+                                                                               
+Hit:7 http://cn.archive.ubuntu.com/ubuntu xenial InRelease
+[33m
+0% [Waiting for headers] [Connecting to zeroc.com] [Connecting to packages.osrf[0m[33m
+0% [7 InRelease gpgv 247 kB] [Waiting for headers] [Waiting for headers] [Conne[0m
+                                                                               
+Get:8 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+[33m
+0% [7 InRelease gpgv 247 kB] [Waiting for headers] [8 InRelease 5,481 B/102 kB [0m[33m
+0% [Waiting for headers] [8 InRelease 14.2 kB/102 kB 14%] [Connecting to zeroc.[0m[33m
+0% [Waiting for headers] [8 InRelease 14.2 kB/102 kB 14%] [Connecting to packag[0m
+                                                                               
+Get:10 http://cn.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+[33m
+0% [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 14.2 kB/102 kB 14%] [Connectin[0m
+                                                                               
+Hit:11 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu xenial InRelease
+[33m
+0% [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 14.2 kB/102 kB 14%] [Waiting f[0m[33m
+0% [11 InRelease gpgv 24.3 kB] [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 14[0m[33m
+0% [11 InRelease gpgv 24.3 kB] [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 34[0m[33m
+0% [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 34.4 kB/102 kB 34%] [Connectin[0m
+                                                                               
+Hit:12 http://linux.teamviewer.com/deb stable InRelease
+[33m
+0% [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 43.1 kB/102 kB 42%] [Connectin[0m[33m
+0% [12 InRelease gpgv 9,357 B] [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 43[0m[33m
+0% [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 43.1 kB/102 kB 42%] [Connectin[0m
+                                                                               
+Hit:13 http://linux.teamviewer.com/deb preview InRelease
+[33m
+0% [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 43.1 kB/102 kB 42%] [Connectin[0m[33m
+0% [13 InRelease gpgv 9,358 B] [10 InRelease 6,947 B/102 kB 7%] [8 InRelease 43[0m[33m
+0% [Connecting to download.zeroc.com] [10 InRelease 30.1 kB/102 kB 29%] [8 InRe[0m
+                                                                               
+Hit:14 http://packages.osrfoundation.org/gazebo/ubuntu-stable xenial InRelease
+[33m
+0% [Connecting to download.zeroc.com] [10 InRelease 35.9 kB/102 kB 35%] [8 InRe[0m[33m
+0% [Connecting to download.zeroc.com] [14 InRelease gpgv 4,255 B] [10 InRelease[0m[33m
+0% [Connecting to download.zeroc.com] [10 InRelease 48.9 kB/102 kB 48%] [8 InRe[0m[33m
+0% [Connecting to download.zeroc.com (52.85.151.246)] [10 InRelease 57.6 kB/102[0m[33m
+0% [Connecting to download.zeroc.com (52.85.151.246)] [8 InRelease gpgv 102 kB][0m[33m
+0% [Connecting to download.zeroc.com (52.85.151.246)] [10 InRelease 66.3 kB/102[0m
+                                                                               
+Hit:9 http://zeroc.com/download/apt/ubuntu16.04 stable InRelease
+[33m
+0% [10 InRelease 89.5 kB/102 kB 88%] [Waiting for headers] [Waiting for headers[0m[33m
+0% [9 InRelease gpgv 8,220 B] [10 InRelease 89.5 kB/102 kB 88%] [Waiting for he[0m[33m
+0% [9 InRelease gpgv 8,220 B] [Waiting for headers] [Waiting for headers] [Wait[0m[33m
+0% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting f[0m[33m
+0% [10 InRelease gpgv 102 kB] [Waiting for headers] [Waiting for headers] [Wait[0m
+                                                                               
+Hit:15 http://jderobot.org/apt xenial InRelease
+[33m
+0% [10 InRelease gpgv 102 kB] [Waiting for headers] [Waiting for headers] [Wait[0m
+                                                                               
+Get:16 http://security.ubuntu.com/ubuntu xenial-security/main amd64 DEP-11 Metadata [67.5 kB]
+[33m
+0% [10 InRelease gpgv 102 kB] [Waiting for headers] [16 Components-amd64 1,240 [0m[33m
+0% [Waiting for headers] [16 Components-amd64 20.1 kB/67.5 kB 30%] [Waiting for[0m[33m
+0% [15 InRelease gpgv 1,747 B] [Waiting for headers] [16 Components-amd64 20.1 [0m[33m
+0% [Waiting for headers] [16 Components-amd64 54.8 kB/67.5 kB 81%] [Waiting for[0m[33m
+                                                                               
+0% [Waiting for headers] [Waiting for headers] [Waiting for headers][0m[33m
+0% [16 Components-amd64 store 0 B] [Waiting for headers] [Waiting for headers] [0m
+                                                                               
+Get:17 http://cn.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+[33m
+0% [16 Components-amd64 store 0 B] [17 InRelease 1,155 B/102 kB 1%] [Waiting fo[0m[33m
+0% [17 InRelease 8,395 B/102 kB 8%] [Waiting for headers] [Waiting for headers][0m
+                                                                               
+Hit:18 http://packages.ros.org/ros/ubuntu xenial InRelease
+[33m
+0% [17 InRelease 17.1 kB/102 kB 17%] [Waiting for headers] [Waiting for headers[0m[33m
+0% [18 InRelease gpgv 4,037 B] [17 InRelease 17.1 kB/102 kB 17%] [Waiting for h[0m[33m
+0% [17 InRelease 40.3 kB/102 kB 39%] [Waiting for headers] [Waiting for headers[0m
+                                                                               
+Hit:19 http://packages.microsoft.com/repos/vscode stable InRelease
+[33m
+                                                                               
+0% [17 InRelease 88.0 kB/102 kB 86%] [Waiting for headers][0m[33m
+0% [19 InRelease gpgv 2,802 B] [17 InRelease 88.0 kB/102 kB 86%] [Waiting for h[0m[33m
+                                                                               
+0% [19 InRelease gpgv 2,802 B] [Waiting for headers][0m[33m
+                                                    
+0% [Waiting for headers] [Waiting for headers][0m[33m
+0% [17 InRelease gpgv 102 kB] [Waiting for headers] [Waiting for headers][0m
+                                                                         
+Get:20 http://security.ubuntu.com/ubuntu xenial-security/main DEP-11 64x64 Icons [81.7 kB]
+[33m
+0% [17 InRelease gpgv 102 kB] [Waiting for headers] [20 icons-64x64 1,240 B/81.[0m[33m
+                                                                               
+39% [Waiting for headers] [20 icons-64x64 34.5 kB/81.7 kB 42%][0m[33m
+                                                              
+41% [Waiting for headers][0m
+                         
+Get:21 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 DEP-11 Metadata [56.0 kB]
+[33m
+41% [Waiting for headers] [21 Components-amd64 407 B/56.0 kB 1%][0m[33m
+41% [20 icons-64x64 store 0 B] [Waiting for headers] [21 Components-amd64 407 B[0m[33m
+                                                                               
+42% [Waiting for headers] [21 Components-amd64 3,303 B/56.0 kB 6%][0m
+                                                                  
+Get:22 http://cn.archive.ubuntu.com/ubuntu xenial-updates/main amd64 DEP-11 Metadata [317 kB]
+[33m
+43% [22 Components-amd64 2,687 B/317 kB 1%] [21 Components-amd64 23.6 kB/56.0 k[0m[33m
+                                                                               
+46% [22 Components-amd64 43.2 kB/317 kB 14%] [Waiting for headers][0m
+                                                                  
+Get:23 http://security.ubuntu.com/ubuntu xenial-security/universe DEP-11 64x64 Icons [93.6 kB]
+[33m
+46% [22 Components-amd64 43.2 kB/317 kB 14%] [23 icons-64x64 2,159 B/93.6 kB 2%[0m[33m
+46% [21 Components-amd64 store 0 B] [22 Components-amd64 43.2 kB/317 kB 14%] [2[0m[33m
+49% [22 Components-amd64 66.4 kB/317 kB 21%] [23 icons-64x64 23.9 kB/93.6 kB 26[0m[33m
+                                                                               
+56% [22 Components-amd64 145 kB/317 kB 46%][0m[33m
+56% [23 icons-64x64 store 0 B] [22 Components-amd64 145 kB/317 kB 46%][0m[33m
+                                                                      
+56% [22 Components-amd64 149 kB/317 kB 47%][0m[33m
+                                           
+65% [Waiting for headers][0m[33m
+65% [22 Components-amd64 store 0 B] [Waiting for headers][0m
+                                                         
+Get:24 http://cn.archive.ubuntu.com/ubuntu xenial-updates/main DEP-11 64x64 Icons [226 kB]
+[33m
+65% [22 Components-amd64 store 0 B] [24 icons-64x64 1,378 B/226 kB 1%][0m[33m
+                                                                      
+76% [22 Components-amd64 store 0 B][0m
+                                   
+Get:25 http://cn.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 DEP-11 Metadata [193 kB]
+[33m
+76% [22 Components-amd64 store 0 B] [25 Components-amd64 771 B/193 kB 0%][0m[33m
+                                                                         
+76% [25 Components-amd64 3,667 B/193 kB 2%][0m[33m
+76% [24 icons-64x64 store 0 B] [25 Components-amd64 3,667 B/193 kB 2%][0m[33m
+                                                                      
+76% [25 Components-amd64 10.9 kB/193 kB 6%][0m[33m
+                                           
+85% [Waiting for headers][0m
+                         
+Get:26 http://cn.archive.ubuntu.com/ubuntu xenial-updates/universe DEP-11 64x64 Icons [275 kB]
+[33m
+85% [26 icons-64x64 1,746 B/275 kB 1%][0m[33m
+85% [25 Components-amd64 store 0 B] [26 icons-64x64 1,746 B/275 kB 1%][0m[33m
+                                                                      
+96% [26 icons-64x64 210 kB/275 kB 76%][0m[33m
+                                      
+99% [Waiting for headers][0m
+                         
+Get:27 http://cn.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 DEP-11 Metadata [5,888 B]
+[33m
+99% [27 Components-amd64 1,382 B/5,888 B 23%][0m[33m
+99% [26 icons-64x64 store 0 B] [27 Components-amd64 1,382 B/5,888 B 23%][0m[33m
+                                                                        
+99% [26 icons-64x64 store 0 B][0m
+                              
+Get:28 http://cn.archive.ubuntu.com/ubuntu xenial-backports/main amd64 DEP-11 Metadata [3,328 B]
+[33m
+99% [26 icons-64x64 store 0 B] [28 Components-amd64 3,328 B/3,328 B 100%][0m[33m
+                                                                         
+99% [26 icons-64x64 store 0 B] [Waiting for headers][0m
+                                                    
+Get:29 http://cn.archive.ubuntu.com/ubuntu xenial-backports/universe amd64 DEP-11 Metadata [5,088 B]
+[33m
+99% [26 icons-64x64 store 0 B] [29 Components-amd64 0 B/5,088 B 0%][0m[33m
+                                                                   
+100% [26 icons-64x64 store 0 B][0m[33m
+                               
+100% [Working][0m[33m
+100% [27 Components-amd64 store 0 B][0m[33m
+                                    
+100% [Working][0m[33m
+100% [28 Components-amd64 store 0 B][0m[33m
+                                    
+100% [Working][0m[33m
+100% [29 Components-amd64 store 0 B][0m[33m
+                                    
+100% [Working][0m
+              
+Fetched 1,631 kB in 3s (472 kB/s)
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 1%
+
+Reading package lists... 4%
+
+Reading package lists... 4%
+
+Reading package lists... 8%
+
+Reading package lists... 8%
+
+Reading package lists... 10%
+
+Reading package lists... 10%
+
+Reading package lists... 10%
+
+Reading package lists... 10%
+
+Reading package lists... 10%
+
+Reading package lists... 10%
+
+Reading package lists... 10%
+
+Reading package lists... 10%
+
+Reading package lists... 34%
+
+Reading package lists... 34%
+
+Reading package lists... 43%
+
+Reading package lists... 58%
+
+Reading package lists... 58%
+
+Reading package lists... 72%
+
+Reading package lists... 72%
+
+Reading package lists... 72%
+
+Reading package lists... 72%
+
+Reading package lists... 73%
+
+Reading package lists... 73%
+
+Reading package lists... 73%
+
+Reading package lists... 73%
+
+Reading package lists... 76%
+
+Reading package lists... 76%
+
+Reading package lists... 78%
+
+Reading package lists... 78%
+
+Reading package lists... 81%
+
+Reading package lists... 81%
+
+Reading package lists... 81%
+
+Reading package lists... 81%
+
+Reading package lists... 81%
+
+Reading package lists... 81%
+
+Reading package lists... 81%
+
+Reading package lists... 81%
+
+Reading package lists... 83%
+
+Reading package lists... 83%
+
+Reading package lists... 85%
+
+Reading package lists... 85%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 86%
+
+Reading package lists... 88%
+
+Reading package lists... 88%
+
+Reading package lists... 90%
+
+Reading package lists... 90%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 92%
+
+Reading package lists... 93%
+
+Reading package lists... 93%
+
+Reading package lists... 94%
+
+Reading package lists... 94%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 97%
+
+Reading package lists... 97%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 1%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree       
+
+
+Reading state information... 0%
+
+Reading state information... 0%
+
+Reading state information... Done
+
+46 packages can be upgraded. Run 'apt list --upgradable' to see them.
+]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# sudo apt install jderobot-cameraserver jderobot-cameraview
+
+Reading package lists... 0%
+
+Reading package lists... 100%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree       
+
+
+Reading state information... 0%
+
+Reading state information... 0%
+
+Reading state information... Done
+
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.4.0-104 linux-headers-4.4.0-104-generic
+  linux-image-4.4.0-104-generic linux-image-extra-4.4.0-104-generic
+  linux-signed-image-4.4.0-104-generic
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  jderobot-colorspaces jderobot-comm jderobot-config jderobot-interfaces
+  jderobot-logger jderobot-resourcelocator jderobot-setup jderobot-types
+  jderobot-util
+The following NEW packages will be installed:
+  jderobot-cameraserver jderobot-cameraview jderobot-colorspaces jderobot-comm
+  jderobot-config jderobot-interfaces jderobot-logger jderobot-resourcelocator
+  jderobot-setup jderobot-types jderobot-util
+0 upgraded, 11 newly installed, 0 to remove and 46 not upgraded.
+Need to get 2,975 kB of archives.
+After this operation, 18.1 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m
+0% [Working][0m[33m
+0% [Working][0m[33m
+0% [Connecting to jderobot.org (193.147.79.60)][0m
+                                               
+Get:1 http://jderobot.org/apt xenial/main amd64 jderobot-cameraserver amd64 5.6.3 [78.5 kB]
+[33m
+0% [1 jderobot-cameraserver 4,128 B/78.5 kB 5%][0m[33m
+0% [1 jderobot-cameraserver 14.0 kB/78.5 kB 18%][0m[33m
+0% [1 jderobot-cameraserver 18.4 kB/78.5 kB 23%][0m[33m
+1% [1 jderobot-cameraserver 25.7 kB/78.5 kB 33%][0m[33m
+1% [1 jderobot-cameraserver 35.9 kB/78.5 kB 46%][0m[33m
+1% [1 jderobot-cameraserver 54.9 kB/78.5 kB 70%][0m[33m
+1% [1 jderobot-cameraserver 54.9 kB/78.5 kB 70%][0m[33m
+1% [1 jderobot-cameraserver 54.9 kB/78.5 kB 70%][0m[33m
+2% [1 jderobot-cameraserver 56.4 kB/78.5 kB 72%][0m[33m
+2% [1 jderobot-cameraserver 65.1 kB/78.5 kB 83%][0m[33m
+2% [1 jderobot-cameraserver 73.9 kB/78.5 kB 94%]             11.4 kB/s 4min 13s[0m[33m
+4% [Working]                                                 11.4 kB/s 4min 13s[0m[33m
+4% [Waiting for headers]                                     11.4 kB/s 4min 13s[0m
+                                                                               
+Get:2 http://jderobot.org/apt xenial/main amd64 jderobot-setup amd64 5.6.3 [21.0 kB]
+[33m
+4% [2 jderobot-setup 4,129 B/21.0 kB 20%]                    11.4 kB/s 4min 13s[0m[33m
+6% [Working]                                                 11.4 kB/s 4min 11s[0m[33m
+6% [Waiting for headers]                                     11.4 kB/s 4min 11s[0m[33m
+6% [Waiting for headers]                                     11.4 kB/s 4min 11s[0m[33m
+6% [Waiting for headers]                                     11.4 kB/s 4min 11s[0m[33m
+6% [Waiting for headers]                                     11.4 kB/s 4min 11s[0m[33m
+6% [Waiting for headers]                                     11.4 kB/s 4min 11s[0m[33m
+6% [Waiting for headers]                                     11.4 kB/s 4min 11s[0m
+                                                                               
+Get:3 http://jderobot.org/apt xenial/main amd64 jderobot-config amd64 5.6.3 [240 kB]
+[33m
+6% [3 jderobot-config 1,207 B/240 kB 1%]                     11.4 kB/s 4min 11s[0m[33m
+6% [3 jderobot-config 4,127 B/240 kB 2%]                     11.4 kB/s 4min 11s[0m[33m
+7% [3 jderobot-config 9,652 B/240 kB 4%]                     5,844 B/s 8min 10s[0m[33m
+7% [3 jderobot-config 21.3 kB/240 kB 9%]                      5,844 B/s 8min 8s[0m[33m
+7% [3 jderobot-config 34.5 kB/240 kB 14%]                     5,844 B/s 8min 6s[0m[33m
+7% [3 jderobot-config 34.5 kB/240 kB 14%]                     5,844 B/s 8min 6s[0m[33m
+7% [3 jderobot-config 34.5 kB/240 kB 14%]                     5,844 B/s 8min 6s[0m[33m
+7% [3 jderobot-config 35.9 kB/240 kB 15%]                     5,844 B/s 8min 5s[0m[33m
+7% [3 jderobot-config 38.9 kB/240 kB 16%]                     5,844 B/s 8min 5s[0m[33m
+8% [3 jderobot-config 44.7 kB/240 kB 19%]                     5,844 B/s 8min 4s[0m[33m
+8% [3 jderobot-config 62.2 kB/240 kB 26%]                     5,844 B/s 8min 1s[0m[33m
+8% [3 jderobot-config 73.9 kB/240 kB 31%]                    5,844 B/s 7min 59s[0m[33m
+9% [3 jderobot-config 85.6 kB/240 kB 36%]                    5,844 B/s 7min 57s[0m[33m
+9% [3 jderobot-config 97.3 kB/240 kB 41%]                    5,844 B/s 7min 55s[0m[33m
+9% [3 jderobot-config 97.3 kB/240 kB 41%]                    14.6 kB/s 3min 10s[0m[33m
+9% [3 jderobot-config 100 kB/240 kB 42%]                     14.6 kB/s 3min 10s[0m[33m
+9% [3 jderobot-config 106 kB/240 kB 44%]                     14.6 kB/s 3min 10s[0m[33m
+9% [3 jderobot-config 118 kB/240 kB 49%]                      14.6 kB/s 3min 9s[0m[33m
+10% [3 jderobot-config 132 kB/240 kB 55%]                     14.6 kB/s 3min 8s[0m[33m
+10% [3 jderobot-config 156 kB/240 kB 65%]                     14.6 kB/s 3min 6s[0m[33m
+11% [3 jderobot-config 172 kB/240 kB 72%]                     14.6 kB/s 3min 5s[0m[33m
+11% [3 jderobot-config 188 kB/240 kB 78%]                     14.6 kB/s 3min 4s[0m[33m
+12% [3 jderobot-config 204 kB/240 kB 85%]                     14.6 kB/s 3min 3s[0m[33m
+13% [3 jderobot-config 236 kB/240 kB 98%]                     14.6 kB/s 3min 1s[0m[33m
+15% [Working]                                                 14.6 kB/s 3min 0s[0m
+                                                                               
+Get:4 http://jderobot.org/apt xenial/main amd64 jderobot-types amd64 5.6.3 [3,272 B]
+[33m
+15% [4 jderobot-types 3,272 B/3,272 B 100%]                   14.6 kB/s 3min 0s[0m[33m
+16% [Working]                                                 14.6 kB/s 3min 0s[0m
+                                                                               
+Get:5 http://jderobot.org/apt xenial/main amd64 jderobot-logger amd64 5.6.3 [3,604 B]
+[33m
+17% [5 jderobot-logger 1,211 B/3,604 B 34%]                   14.6 kB/s 3min 0s[0m[33m
+18% [Working]                                                 14.6 kB/s 3min 0s[0m
+                                                                               
+Get:6 http://jderobot.org/apt xenial/main amd64 jderobot-interfaces amd64 5.6.3 [679 kB]
+[33m
+19% [6 jderobot-interfaces 7,047 B/679 kB 1%]                25.7 kB/s 1min 42s[0m[33m
+19% [6 jderobot-interfaces 30.2 kB/679 kB 4%]                25.7 kB/s 1min 41s[0m[33m
+20% [6 jderobot-interfaces 46.3 kB/679 kB 7%]                25.7 kB/s 1min 40s[0m[33m
+20% [6 jderobot-interfaces 62.4 kB/679 kB 9%]                25.7 kB/s 1min 39s[0m[33m
+21% [6 jderobot-interfaces 81.3 kB/679 kB 12%]               25.7 kB/s 1min 39s[0m[33m
+21% [6 jderobot-interfaces 81.3 kB/679 kB 12%]               25.7 kB/s 1min 39s[0m[33m
+21% [6 jderobot-interfaces 81.3 kB/679 kB 12%]               25.7 kB/s 1min 39s[0m[33m
+21% [6 jderobot-interfaces 82.8 kB/679 kB 12%]               25.7 kB/s 1min 39s[0m[33m
+21% [6 jderobot-interfaces 91.6 kB/679 kB 13%]               25.7 kB/s 1min 38s[0m[33m
+21% [6 jderobot-interfaces 100 kB/679 kB 15%]                25.7 kB/s 1min 38s[0m[33m
+21% [6 jderobot-interfaces 113 kB/679 kB 17%]                25.7 kB/s 1min 37s[0m[33m
+22% [6 jderobot-interfaces 132 kB/679 kB 20%]                25.7 kB/s 1min 37s[0m[33m
+23% [6 jderobot-interfaces 156 kB/679 kB 23%]                24.7 kB/s 1min 39s[0m[33m
+23% [6 jderobot-interfaces 156 kB/679 kB 23%]                24.7 kB/s 1min 39s[0m[33m
+23% [6 jderobot-interfaces 156 kB/679 kB 23%]                24.7 kB/s 1min 39s[0m[33m
+23% [6 jderobot-interfaces 160 kB/679 kB 24%]                24.7 kB/s 1min 39s[0m[33m
+23% [6 jderobot-interfaces 166 kB/679 kB 24%]                24.7 kB/s 1min 39s[0m[33m
+23% [6 jderobot-interfaces 175 kB/679 kB 26%]                24.7 kB/s 1min 39s[0m[33m
+23% [6 jderobot-interfaces 188 kB/679 kB 28%]                24.7 kB/s 1min 38s[0m[33m
+24% [6 jderobot-interfaces 207 kB/679 kB 30%]                24.7 kB/s 1min 37s[0m[33m
+24% [6 jderobot-interfaces 220 kB/679 kB 32%]                24.7 kB/s 1min 37s[0m[33m
+25% [6 jderobot-interfaces 233 kB/679 kB 34%]                24.7 kB/s 1min 36s[0m[33m
+25% [6 jderobot-interfaces 233 kB/679 kB 34%]                24.7 kB/s 1min 36s[0m[33m
+25% [6 jderobot-interfaces 264 kB/679 kB 39%]                24.7 kB/s 1min 35s[0m[33m
+26% [6 jderobot-interfaces 277 kB/679 kB 41%]                20.2 kB/s 1min 56s[0m[33m
+26% [6 jderobot-interfaces 290 kB/679 kB 43%]                20.2 kB/s 1min 56s[0m[33m
+27% [6 jderobot-interfaces 303 kB/679 kB 45%]                20.2 kB/s 1min 55s[0m[33m
+27% [6 jderobot-interfaces 316 kB/679 kB 47%]                20.2 kB/s 1min 54s[0m[33m
+27% [6 jderobot-interfaces 330 kB/679 kB 49%]                20.2 kB/s 1min 54s[0m[33m
+27% [6 jderobot-interfaces 334 kB/679 kB 49%]                20.2 kB/s 1min 53s[0m[33m
+27% [6 jderobot-interfaces 334 kB/679 kB 49%]                20.2 kB/s 1min 53s[0m[33m
+29% [6 jderobot-interfaces 382 kB/679 kB 56%]                20.2 kB/s 1min 51s[0m[33m
+29% [6 jderobot-interfaces 401 kB/679 kB 59%]                20.2 kB/s 1min 50s[0m[33m
+30% [6 jderobot-interfaces 420 kB/679 kB 62%]                20.2 kB/s 1min 49s[0m[33m
+30% [6 jderobot-interfaces 420 kB/679 kB 62%]                20.2 kB/s 1min 49s[0m[33m
+30% [6 jderobot-interfaces 422 kB/679 kB 62%]                20.2 kB/s 1min 49s[0m[33m
+30% [6 jderobot-interfaces 446 kB/679 kB 66%]                28.2 kB/s 1min 17s[0m[33m
+31% [6 jderobot-interfaces 461 kB/679 kB 68%]                28.2 kB/s 1min 16s[0m[33m
+31% [6 jderobot-interfaces 486 kB/679 kB 72%]                28.2 kB/s 1min 16s[0m[33m
+32% [6 jderobot-interfaces 505 kB/679 kB 74%]                28.2 kB/s 1min 15s[0m[33m
+32% [6 jderobot-interfaces 518 kB/679 kB 76%]                28.2 kB/s 1min 14s[0m[33m
+33% [6 jderobot-interfaces 537 kB/679 kB 79%]                28.2 kB/s 1min 14s[0m[33m
+34% [6 jderobot-interfaces 575 kB/679 kB 85%]                28.2 kB/s 1min 12s[0m[33m
+34% [6 jderobot-interfaces 594 kB/679 kB 87%]                28.2 kB/s 1min 12s[0m[33m
+35% [6 jderobot-interfaces 613 kB/679 kB 90%]                28.2 kB/s 1min 11s[0m[33m
+35% [6 jderobot-interfaces 632 kB/679 kB 93%]                28.2 kB/s 1min 10s[0m[33m
+36% [6 jderobot-interfaces 664 kB/679 kB 98%]                 28.2 kB/s 1min 9s[0m[33m
+36% [6 jderobot-interfaces 670 kB/679 kB 99%]                 28.2 kB/s 1min 9s[0m[33m
+38% [Working]                                                 28.2 kB/s 1min 9s[0m[33m
+38% [Waiting for headers]                                         38.6 kB/s 50s[0m
+                                                                               
+Get:7 http://jderobot.org/apt xenial/main amd64 jderobot-colorspaces amd64 5.6.3 [56.3 kB]
+[33m
+39% [7 jderobot-colorspaces 8,192 B/56.3 kB 15%]                  38.6 kB/s 50s[0m[33m
+39% [7 jderobot-colorspaces 22.2 kB/56.3 kB 39%]                  38.6 kB/s 49s[0m[33m
+40% [7 jderobot-colorspaces 45.6 kB/56.3 kB 81%]                  38.6 kB/s 49s[0m[33m
+42% [Working]                                                     38.6 kB/s 49s[0m[33m
+42% [Waiting for headers]                                         38.6 kB/s 49s[0m[33m
+42% [Waiting for headers]                                         38.6 kB/s 49s[0m[33m
+42% [Waiting for headers]                                         38.6 kB/s 49s[0m[33m
+42% [Waiting for headers]                                         38.6 kB/s 49s[0m
+                                                                               
+Get:8 http://jderobot.org/apt xenial/main amd64 jderobot-comm amd64 5.6.3 [1,575 kB]
+[33m
+42% [8 jderobot-comm 1,205 B/1,575 kB 0%]                         38.6 kB/s 49s[0m[33m
+42% [8 jderobot-comm 1,205 B/1,575 kB 0%]                         38.6 kB/s 49s[0m[33m
+42% [8 jderobot-comm 4,125 B/1,575 kB 0%]                         38.6 kB/s 49s[0m[33m
+42% [8 jderobot-comm 7,045 B/1,575 kB 0%]                         38.6 kB/s 48s[0m[33m
+42% [8 jderobot-comm 12.6 kB/1,575 kB 1%]                         38.6 kB/s 48s[0m[33m
+43% [8 jderobot-comm 52.1 kB/1,575 kB 3%]                         38.6 kB/s 47s[0m[33m
+44% [8 jderobot-comm 69.7 kB/1,575 kB 4%]                    19.4 kB/s 1min 34s[0m[33m
+44% [8 jderobot-comm 87.2 kB/1,575 kB 6%]                    19.4 kB/s 1min 33s[0m[33m
+44% [8 jderobot-comm 87.2 kB/1,575 kB 6%]                    19.4 kB/s 1min 33s[0m[33m
+45% [8 jderobot-comm 124 kB/1,575 kB 8%]                     19.4 kB/s 1min 31s[0m[33m
+46% [8 jderobot-comm 156 kB/1,575 kB 10%]                    19.4 kB/s 1min 29s[0m[33m
+47% [8 jderobot-comm 178 kB/1,575 kB 11%]                    19.4 kB/s 1min 28s[0m[33m
+47% [8 jderobot-comm 207 kB/1,575 kB 13%]                    19.4 kB/s 1min 26s[0m[33m
+48% [8 jderobot-comm 227 kB/1,575 kB 14%]                    19.4 kB/s 1min 25s[0m[33m
+49% [8 jderobot-comm 264 kB/1,575 kB 17%]                    19.4 kB/s 1min 24s[0m[33m
+49% [8 jderobot-comm 278 kB/1,575 kB 18%]                    19.4 kB/s 1min 23s[0m[33m
+49% [8 jderobot-comm 284 kB/1,575 kB 18%]                    19.4 kB/s 1min 22s[0m[33m
+50% [8 jderobot-comm 290 kB/1,575 kB 18%]                    19.4 kB/s 1min 22s[0m[33m
+50% [8 jderobot-comm 313 kB/1,575 kB 20%]                         40.6 kB/s 38s[0m[33m
+51% [8 jderobot-comm 334 kB/1,575 kB 21%]                         40.6 kB/s 38s[0m[33m
+51% [8 jderobot-comm 354 kB/1,575 kB 22%]                         40.6 kB/s 37s[0m[33m
+52% [8 jderobot-comm 395 kB/1,575 kB 25%]                         40.6 kB/s 36s[0m[33m
+53% [8 jderobot-comm 417 kB/1,575 kB 26%]                         40.6 kB/s 36s[0m[33m
+54% [8 jderobot-comm 440 kB/1,575 kB 28%]                         40.6 kB/s 35s[0m[33m
+54% [8 jderobot-comm 462 kB/1,575 kB 29%]                         40.6 kB/s 35s[0m[33m
+55% [8 jderobot-comm 500 kB/1,575 kB 32%]                         40.6 kB/s 34s[0m[33m
+56% [8 jderobot-comm 524 kB/1,575 kB 33%]                         40.6 kB/s 33s[0m[33m
+56% [8 jderobot-comm 530 kB/1,575 kB 34%]                         40.6 kB/s 33s[0m[33m
+56% [8 jderobot-comm 535 kB/1,575 kB 34%]                         40.6 kB/s 33s[0m[33m
+56% [8 jderobot-comm 546 kB/1,575 kB 35%]                         40.6 kB/s 33s[0m[33m
+57% [8 jderobot-comm 572 kB/1,575 kB 36%]                         43.0 kB/s 30s[0m[33m
+57% [8 jderobot-comm 572 kB/1,575 kB 36%]                         43.0 kB/s 30s[0m[33m
+57% [8 jderobot-comm 572 kB/1,575 kB 36%]                         43.0 kB/s 30s[0m[33m
+57% [8 jderobot-comm 573 kB/1,575 kB 36%]                         43.0 kB/s 30s[0m[33m
+57% [8 jderobot-comm 573 kB/1,575 kB 36%]                         43.0 kB/s 30s[0m[33m
+57% [8 jderobot-comm 576 kB/1,575 kB 37%]                         43.0 kB/s 30s[0m[33m
+57% [8 jderobot-comm 579 kB/1,575 kB 37%]                         43.0 kB/s 30s[0m[33m
+58% [8 jderobot-comm 585 kB/1,575 kB 37%]                         43.0 kB/s 30s[0m[33m
+58% [8 jderobot-comm 594 kB/1,575 kB 38%]                         43.0 kB/s 30s[0m[33m
+59% [8 jderobot-comm 643 kB/1,575 kB 41%]                         43.0 kB/s 29s[0m[33m
+59% [8 jderobot-comm 643 kB/1,575 kB 41%]                         43.0 kB/s 29s[0m[33m
+59% [8 jderobot-comm 645 kB/1,575 kB 41%]                         43.0 kB/s 29s[0m[33m
+59% [8 jderobot-comm 645 kB/1,575 kB 41%]                    12.1 kB/s 1min 42s[0m[33m
+59% [8 jderobot-comm 648 kB/1,575 kB 41%]                    12.1 kB/s 1min 42s[0m[33m
+59% [8 jderobot-comm 649 kB/1,575 kB 41%]                    12.1 kB/s 1min 42s[0m[33m
+60% [8 jderobot-comm 665 kB/1,575 kB 42%]                    12.1 kB/s 1min 41s[0m[33m
+60% [8 jderobot-comm 678 kB/1,575 kB 43%]                    12.1 kB/s 1min 40s[0m[33m
+61% [8 jderobot-comm 696 kB/1,575 kB 44%]                    12.1 kB/s 1min 38s[0m[33m
+61% [8 jderobot-comm 714 kB/1,575 kB 45%]                    12.1 kB/s 1min 37s[0m[33m
+61% [8 jderobot-comm 731 kB/1,575 kB 46%]                    12.1 kB/s 1min 35s[0m[33m
+62% [8 jderobot-comm 766 kB/1,575 kB 49%]                    12.1 kB/s 1min 32s[0m[33m
+63% [8 jderobot-comm 784 kB/1,575 kB 50%]                    12.1 kB/s 1min 31s[0m[33m
+63% [8 jderobot-comm 801 kB/1,575 kB 51%]                    12.1 kB/s 1min 30s[0m[33m
+64% [8 jderobot-comm 822 kB/1,575 kB 52%]                    12.1 kB/s 1min 28s[0m[33m
+64% [8 jderobot-comm 830 kB/1,575 kB 53%]                         30.8 kB/s 34s[0m[33m
+65% [8 jderobot-comm 852 kB/1,575 kB 54%]                         30.8 kB/s 33s[0m[33m
+65% [8 jderobot-comm 868 kB/1,575 kB 55%]                         30.8 kB/s 33s[0m[33m
+66% [8 jderobot-comm 887 kB/1,575 kB 56%]                         30.8 kB/s 32s[0m[33m
+66% [8 jderobot-comm 908 kB/1,575 kB 58%]                         30.8 kB/s 31s[0m[33m
+67% [8 jderobot-comm 928 kB/1,575 kB 59%]                         30.8 kB/s 31s[0m[33m
+67% [8 jderobot-comm 949 kB/1,575 kB 60%]                         30.8 kB/s 30s[0m[33m
+68% [8 jderobot-comm 989 kB/1,575 kB 63%]                         30.8 kB/s 29s[0m[33m
+69% [8 jderobot-comm 1,010 kB/1,575 kB 64%]                       30.8 kB/s 28s[0m[33m
+70% [8 jderobot-comm 1,033 kB/1,575 kB 66%]                       30.8 kB/s 27s[0m[33m
+70% [8 jderobot-comm 1,033 kB/1,575 kB 66%]                       30.8 kB/s 27s[0m[33m
+70% [8 jderobot-comm 1,033 kB/1,575 kB 66%]                       30.8 kB/s 27s[0m[33m
+70% [8 jderobot-comm 1,035 kB/1,575 kB 66%]                       34.0 kB/s 25s[0m[33m
+70% [8 jderobot-comm 1,035 kB/1,575 kB 66%]                       34.0 kB/s 25s[0m[33m
+70% [8 jderobot-comm 1,035 kB/1,575 kB 66%]                       34.0 kB/s 25s[0m[33m
+70% [8 jderobot-comm 1,038 kB/1,575 kB 66%]                       34.0 kB/s 25s[0m[33m
+70% [8 jderobot-comm 1,043 kB/1,575 kB 66%]                       34.0 kB/s 25s[0m[33m
+70% [8 jderobot-comm 1,054 kB/1,575 kB 67%]                       34.0 kB/s 24s[0m[33m
+71% [8 jderobot-comm 1,073 kB/1,575 kB 68%]                       34.0 kB/s 24s[0m[33m
+71% [8 jderobot-comm 1,073 kB/1,575 kB 68%]                       34.0 kB/s 24s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                       34.0 kB/s 23s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                       34.0 kB/s 23s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                       34.0 kB/s 23s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                       34.0 kB/s 23s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,083 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,084 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,084 kB/1,575 kB 69%]                  8,017 B/s 1min 41s[0m[33m
+71% [8 jderobot-comm 1,097 kB/1,575 kB 70%]                  2,428 B/s 5min 28s[0m[33m
+71% [8 jderobot-comm 1,100 kB/1,575 kB 70%]                  2,428 B/s 5min 26s[0m[33m
+71% [8 jderobot-comm 1,100 kB/1,575 kB 70%]                  2,428 B/s 5min 26s[0m[33m
+71% [8 jderobot-comm 1,102 kB/1,575 kB 70%]                  2,428 B/s 5min 26s[0m[33m
+71% [8 jderobot-comm 1,103 kB/1,575 kB 70%]                  2,428 B/s 5min 25s[0m[33m
+72% [8 jderobot-comm 1,106 kB/1,575 kB 70%]                  2,428 B/s 5min 24s[0m[33m
+72% [8 jderobot-comm 1,127 kB/1,575 kB 72%]                  2,428 B/s 5min 16s[0m[33m
+73% [8 jderobot-comm 1,149 kB/1,575 kB 73%]                   2,428 B/s 5min 7s[0m[33m
+73% [8 jderobot-comm 1,172 kB/1,575 kB 74%]                  2,428 B/s 4min 57s[0m[33m
+74% [8 jderobot-comm 1,187 kB/1,575 kB 75%]                  2,428 B/s 4min 51s[0m[33m
+74% [8 jderobot-comm 1,201 kB/1,575 kB 76%]                  2,428 B/s 4min 45s[0m[33m
+74% [8 jderobot-comm 1,211 kB/1,575 kB 77%]                  2,428 B/s 4min 41s[0m[33m
+75% [8 jderobot-comm 1,229 kB/1,575 kB 78%]                       21.9 kB/s 30s[0m[33m
+76% [8 jderobot-comm 1,264 kB/1,575 kB 80%]                       21.9 kB/s 28s[0m[33m
+76% [8 jderobot-comm 1,281 kB/1,575 kB 81%]                       21.9 kB/s 28s[0m[33m
+77% [8 jderobot-comm 1,299 kB/1,575 kB 82%]                       21.9 kB/s 27s[0m[33m
+77% [8 jderobot-comm 1,316 kB/1,575 kB 84%]                       21.9 kB/s 26s[0m[33m
+78% [8 jderobot-comm 1,347 kB/1,575 kB 86%]                       21.9 kB/s 25s[0m[33m
+79% [8 jderobot-comm 1,366 kB/1,575 kB 87%]                       21.9 kB/s 24s[0m[33m
+79% [8 jderobot-comm 1,385 kB/1,575 kB 88%]                       21.9 kB/s 23s[0m[33m
+80% [8 jderobot-comm 1,404 kB/1,575 kB 89%]                       21.9 kB/s 22s[0m[33m
+80% [8 jderobot-comm 1,423 kB/1,575 kB 90%]                       21.9 kB/s 21s[0m[33m
+81% [8 jderobot-comm 1,461 kB/1,575 kB 93%]                       21.9 kB/s 19s[0m[33m
+82% [8 jderobot-comm 1,480 kB/1,575 kB 94%]                       21.9 kB/s 18s[0m[33m
+82% [8 jderobot-comm 1,499 kB/1,575 kB 95%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,521 kB/1,575 kB 97%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,521 kB/1,575 kB 97%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,521 kB/1,575 kB 97%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,522 kB/1,575 kB 97%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,522 kB/1,575 kB 97%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,525 kB/1,575 kB 97%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,534 kB/1,575 kB 97%]                        44.9 kB/s 8s[0m[33m
+83% [8 jderobot-comm 1,543 kB/1,575 kB 98%]                        44.9 kB/s 7s[0m[33m
+86% [Working]                                                      44.9 kB/s 7s[0m[33m
+86% [Waiting for headers]                                          44.9 kB/s 7s[0m
+                                                                               
+Get:9 http://jderobot.org/apt xenial/main amd64 jderobot-util amd64 5.6.3 [226 kB]
+[33m
+86% [9 jderobot-util 4,127 B/226 kB 2%]                            44.9 kB/s 7s[0m[33m
+86% [9 jderobot-util 14.0 kB/226 kB 6%]                            44.9 kB/s 6s[0m[33m
+86% [9 jderobot-util 14.0 kB/226 kB 6%]                           14.9 kB/s 20s[0m[33m
+86% [9 jderobot-util 14.0 kB/226 kB 6%]                           14.9 kB/s 20s[0m[33m
+86% [9 jderobot-util 14.0 kB/226 kB 6%]                           14.9 kB/s 20s[0m[33m
+86% [9 jderobot-util 15.5 kB/226 kB 7%]                           14.9 kB/s 20s[0m[33m
+86% [9 jderobot-util 15.5 kB/226 kB 7%]                           14.9 kB/s 20s[0m[33m
+86% [9 jderobot-util 18.4 kB/226 kB 8%]                           14.9 kB/s 20s[0m[33m
+87% [9 jderobot-util 21.3 kB/226 kB 9%]                           14.9 kB/s 19s[0m[33m
+87% [9 jderobot-util 28.6 kB/226 kB 13%]                          14.9 kB/s 19s[0m[33m
+87% [9 jderobot-util 56.4 kB/226 kB 25%]                          14.9 kB/s 17s[0m[33m
+88% [9 jderobot-util 69.5 kB/226 kB 31%]                          14.9 kB/s 16s[0m[33m
+88% [9 jderobot-util 82.7 kB/226 kB 37%]                          14.9 kB/s 15s[0m[33m
+89% [9 jderobot-util 98.7 kB/226 kB 44%]                          14.9 kB/s 14s[0m[33m
+89% [9 jderobot-util 128 kB/226 kB 57%]                           18.9 kB/s 10s[0m[33m
+90% [9 jderobot-util 147 kB/226 kB 65%]                            18.9 kB/s 9s[0m[33m
+90% [9 jderobot-util 166 kB/226 kB 73%]                            18.9 kB/s 8s[0m[33m
+91% [9 jderobot-util 185 kB/226 kB 82%]                            18.9 kB/s 7s[0m[33m
+92% [9 jderobot-util 217 kB/226 kB 96%]                            18.9 kB/s 5s[0m[33m
+94% [Working]                                                      18.9 kB/s 4s[0m
+                                                                               
+Get:10 http://jderobot.org/apt xenial/main amd64 jderobot-resourcelocator amd64 5.6.3 [50.2 kB]
+[33m
+94% [10 jderobot-resourcelocator 1,209 B/50.2 kB 2%]               18.9 kB/s 4s[0m[33m
+95% [10 jderobot-resourcelocator 36.1 kB/50.2 kB 72%]              18.9 kB/s 3s[0m[33m
+97% [Working]                                                      18.9 kB/s 2s[0m
+                                                                               
+Get:11 http://jderobot.org/apt xenial/main amd64 jderobot-cameraview amd64 5.6.3 [42.8 kB]
+[33m
+97% [11 jderobot-cameraview 1,209 B/42.8 kB 3%]                    18.9 kB/s 2s[0m[33m
+98% [11 jderobot-cameraview 38.3 kB/42.8 kB 89%]                   18.9 kB/s 0s[0m[33m
+100% [Working]                                                     18.9 kB/s 0s[0m
+                                                                               
+Fetched 2,975 kB in 2min 6s (23.6 kB/s)
+
+7[0;23r8[1ASelecting previously unselected package jderobot-cameraserver.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 329486 files and directories currently installed.)
+Preparing to unpack .../jderobot-cameraserver_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 87[24;0f[42m[30mProgress: [  1%][49m[39m [##........................................................] 8Unpacking jderobot-cameraserver (5.6.3) ...
+7[24;0f[42m[30mProgress: [  3%][49m[39m [###.......................................................] 87[24;0f[42m[30mProgress: [  5%][49m[39m [####......................................................] 8Selecting previously unselected package jderobot-setup.
+Preparing to unpack .../jderobot-setup_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [  7%][49m[39m [#####.....................................................] 8Unpacking jderobot-setup (5.6.3) ...
+7[24;0f[42m[30mProgress: [  8%][49m[39m [######....................................................] 87[24;0f[42m[30mProgress: [ 10%][49m[39m [#######...................................................] 8Selecting previously unselected package jderobot-config.
+Preparing to unpack .../jderobot-config_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 12%][49m[39m [########..................................................] 8Unpacking jderobot-config (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 14%][49m[39m [#########.................................................] 87[24;0f[42m[30mProgress: [ 16%][49m[39m [##########................................................] 8Selecting previously unselected package jderobot-types.
+Preparing to unpack .../jderobot-types_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 17%][49m[39m [###########...............................................] 8Unpacking jderobot-types (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 19%][49m[39m [############..............................................] 87[24;0f[42m[30mProgress: [ 21%][49m[39m [#############.............................................] 8Selecting previously unselected package jderobot-logger.
+Preparing to unpack .../jderobot-logger_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 23%][49m[39m [##############............................................] 8Unpacking jderobot-logger (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 25%][49m[39m [###############...........................................] 87[24;0f[42m[30mProgress: [ 26%][49m[39m [################..........................................] 8Selecting previously unselected package jderobot-interfaces.
+Preparing to unpack .../jderobot-interfaces_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 28%][49m[39m [#################.........................................] 8Unpacking jderobot-interfaces (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 30%][49m[39m [##################........................................] 87[24;0f[42m[30mProgress: [ 32%][49m[39m [###################.......................................] 8Selecting previously unselected package jderobot-colorspaces.
+Preparing to unpack .../jderobot-colorspaces_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 33%][49m[39m [####################......................................] 8Unpacking jderobot-colorspaces (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 35%][49m[39m [#####################.....................................] 87[24;0f[42m[30mProgress: [ 37%][49m[39m [######################....................................] 8Selecting previously unselected package jderobot-comm.
+Preparing to unpack .../jderobot-comm_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 39%][49m[39m [#######################...................................] 8Unpacking jderobot-comm (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 41%][49m[39m [########################..................................] 87[24;0f[42m[30mProgress: [ 42%][49m[39m [#########################.................................] 8Selecting previously unselected package jderobot-util.
+Preparing to unpack .../jderobot-util_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 44%][49m[39m [##########################................................] 8Unpacking jderobot-util (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 46%][49m[39m [###########################...............................] 87[24;0f[42m[30mProgress: [ 48%][49m[39m [############################..............................] 8Selecting previously unselected package jderobot-resourcelocator.
+Preparing to unpack .../jderobot-resourcelocator_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 50%][49m[39m [#############################.............................] 8Unpacking jderobot-resourcelocator (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 51%][49m[39m [###############################...........................] 87[24;0f[42m[30mProgress: [ 53%][49m[39m [################################..........................] 8Selecting previously unselected package jderobot-cameraview.
+Preparing to unpack .../jderobot-cameraview_5.6.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 55%][49m[39m [#################################.........................] 8Unpacking jderobot-cameraview (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 57%][49m[39m [##################################........................] 87[24;0f[42m[30mProgress: [ 58%][49m[39m [###################################.......................] 8Setting up jderobot-cameraserver (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 60%][49m[39m [####################################......................] 87[24;0f[42m[30mProgress: [ 62%][49m[39m [#####################################.....................] 8Setting up jderobot-setup (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 64%][49m[39m [######################################....................] 8/var/lib/dpkg/info/jderobot-setup.postinst: 7: /var/lib/dpkg/info/jderobot-setup.postinst: source: not found
+7[24;0f[42m[30mProgress: [ 66%][49m[39m [#######################################...................] 8Setting up jderobot-config (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 67%][49m[39m [########################################..................] 87[24;0f[42m[30mProgress: [ 69%][49m[39m [#########################################.................] 8Setting up jderobot-types (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 71%][49m[39m [##########################################................] 87[24;0f[42m[30mProgress: [ 73%][49m[39m [###########################################...............] 8Setting up jderobot-logger (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 75%][49m[39m [############################################..............] 87[24;0f[42m[30mProgress: [ 76%][49m[39m [#############################################.............] 8Setting up jderobot-interfaces (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 78%][49m[39m [##############################################............] 87[24;0f[42m[30mProgress: [ 80%][49m[39m [###############################################...........] 8Setting up jderobot-colorspaces (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 82%][49m[39m [################################################..........] 87[24;0f[42m[30mProgress: [ 83%][49m[39m [#################################################.........] 8Setting up jderobot-comm (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 85%][49m[39m [##################################################........] 87[24;0f[42m[30mProgress: [ 87%][49m[39m [###################################################.......] 8Setting up jderobot-util (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 89%][49m[39m [####################################################......] 87[24;0f[42m[30mProgress: [ 91%][49m[39m [#####################################################.....] 8Setting up jderobot-resourcelocator (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 92%][49m[39m [######################################################....] 87[24;0f[42m[30mProgress: [ 94%][49m[39m [#######################################################...] 8Setting up jderobot-cameraview (5.6.3) ...
+7[24;0f[42m[30mProgress: [ 96%][49m[39m [########################################################..] 87[24;0f[42m[30mProgress: [ 98%][49m[39m [#########################################################.] 8Processing triggers for libc-bin (2.23-0ubuntu10) ...
+
+7[0;24r8[1A[J]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# cameraserver cameraserver.cfg
+[Info] loaded Ice.Config file: /opt/jderobot/share/jderobot/conf/cameraserver.cfg
+URI: 0
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0326 16:47:21.518596 21315 CameraTask.cpp:82] -------- Camera timeout-
+^C!! 03/26/18 16:48:44.001 error: communicator not destroyed during global destruction.]0;root@lee-Mi: ~/test[01;32mroot@lee-Mi[00m:[01;34m~/test[00m# exit
+exit
+
+Script done on 2019年03月24日 星期日 16时48分51秒
