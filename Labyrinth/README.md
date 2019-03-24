@@ -1,6 +1,6 @@
 # Labyrinth-GSoC-2019
 This program solve the Labyrinth problem proposed by JdeRobot for GSoC 2019.It finds the largest pathway moving only between holes. The descriptions of the problem can be found at:
-https://jderobot.org/store/jmplaza/uploads/gsoc/programming-test-c.pdf
+https://jderobot.org/store/jmplaza/uploads/gsoc/gsoc2019-c++_test.pdf
 
 ## How to use
 ```

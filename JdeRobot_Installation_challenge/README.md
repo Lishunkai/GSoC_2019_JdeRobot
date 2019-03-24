@@ -2,6 +2,7 @@
 
 Experience in installing JdeRobot from source code at Github (it takes me a lot of time before I successfully installed JdeRobot):
 Installation manual: https://jderobot.org/Installation#From_source_code_at_GitHub
+GSoC 2019 installation test: https://jderobot.org/store/jmplaza/uploads/gsoc/gsoc2019-installation_test.pdf
 
 # Requirement 1:
 The ROS hasn't been installed on the computer before.
